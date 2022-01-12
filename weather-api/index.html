@@ -1,58 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Open Weather Map</title>
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-	<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open Weather Map</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-	<div class="wrapper">
-		<div class="search-box">
-			<form action="#" id="searchForm">
-				<div class="input-group">
-					<input type="search" id="searchInput" placeholder="Enter City Name" class="form-control" aria-label="Text input with segmented dropdown button">
-					<div class="input-group-append">
-						<button type="submit" class="btn btn-primary">Search</button>
-					</div>
-				</div>
-			</form>
-		</div>
-		<div class="main-content">
-			<div class="container">
-				<div class="alert alert-danger" role="alert" id="notFound"  style="display: none;"></div>
-				<div id="weatherDetails" style="display: none;">
-					<div class="row">
-						<div class="col">
-							<span id="date"></span>
-							<div class="address">
-								<h1 id="city"></h1>
-								<span id="country"></span>
-							</div>
-						</div>
-						<div class="col">
-							<ul class="info-list">
-								<li>
-									<strong>Sun Rises</strong>:
-									<span id="sunRize"></span>
-								</li>
-								<li>
-									<strong>Sun Sets</strong>:
-									<span id="sunSet"></span>
-								</li>
-								<li>
-									<strong>Visibility</strong>:
-									<span id="visibility"></span>Km
-								</li>
-							</ul>
-						</div>
-					</div>
-					<div id="weather" class="row"></div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<script type="text/javascript" src="index.js"></script>
+    <div class="wrapper">
+        <div class="search-box">
+            <form action="#" id="searchForm">
+                <div class="input-group">
+                    <input type="search" id="searchInput" placeholder="Enter City Name" class="form-control" aria-label="Text input with segmented dropdown button">
+                    <div class="input-group-append">
+                        <button type="submit" class="btn btn-primary">Search</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="main-content">
+            <div class="container">
+                <div class="alert alert-danger" role="alert" id="notFound"  style="display: none;"></div>
+                <div id="weatherDetails" style="display: none;">
+                    <div class="row">
+                        <div class="col">
+                            <span id="date"></span>
+                            <div class="address">
+                                <h1 id="city"></h1>
+                                <span id="country"></span>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <ul class="info-list">
+                                <li>
+                                    <strong>Sun Rises</strong>:
+                                    <span id="sunRize"></span>
+                                </li>
+                                <li>
+                                    <strong>Sun Sets</strong>:
+                                    <span id="sunSet"></span>
+                                </li>
+                                <li>
+                                    <strong>Visibility</strong>:
+                                    <span id="visibility"></span>Km
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="weather" class="row"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="index.js"></script>
 </body>
 </html>
