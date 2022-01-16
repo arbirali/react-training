@@ -11,7 +11,6 @@
   let visibilityBlock = document.getElementById('visibility');
   let weatherBlock = document.getElementById('weather');
 
-  const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
   const weatherUrl = 'https://api.openweathermap.org/data/2.5/weather';
   const appId = 'dba6ed565e0d72778b7b4c1afaca1857';
 
@@ -37,11 +36,11 @@
     let city = document.getElementById('searchInput').value;
     let requestUrl = weatherUrl + '?q=' + city + '&appid=' + appId;
 
-    httpRequest.get(requestUrl, handleData);
+    httpRequest.get(requestUrl, renderWeather);
 
   });
 
-  function handleData(response) {
+  function renderWeather(response) {
 
     if (response.cod == 200) {
       let currentDate = new Date(response.dt * 1000);
@@ -49,12 +48,12 @@
       let sunRiseTime = new Date(response.sys.sunrise * 1000);
 
       headingBlock.innerHTML = response.name;
-      dateBlock.innerHTML = '<strong>' + months[currentDate.getMonth()] + '</strong>, ' + currentDate.getDate() + ', ' + currentDate.getFullYear();
+      dateBlock.innerHTML = currentDate.toDateString();
       countryBlock.innerHTML = response.sys.country;
       sunRizeBlock.innerHTML = sunRiseTime.getHours() + ':' + sunRiseTime.getMinutes();
       sunSetBlock.innerHTML = sunsetTime.getHours() + ':' + sunsetTime.getMinutes();
       visibilityBlock.innerHTML = response.visibility / 1000;
-      weatherBlock.innerHTML = weatherList(response.weather);
+      weatherBlock.innerHTML = getWeatherList(response.weather);
 
       contentBox.style.display = '';
       noData.style.display = 'none';
@@ -68,7 +67,7 @@
     }
   }
 
-  function weatherList(weather) {
+  function getWeatherList(weather) {
     let list = '';
     for (var i = 0; i < weather.length; i++) {
       list += '<div class="col">';
