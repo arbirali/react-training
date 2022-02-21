@@ -1,0 +1,44 @@
+body {
+    background: #eee;
+}
+
+#notFound,
+.description {
+    text-transform: capitalize;
+}
+
+.search-box {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+.main-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.address h1 {
+    font-size: 4rem;
+    display: inline-block;
+}
+
+.address span {
+    font-size: 1rem;
+    margin-left: 1rem;
+}
+
+.info-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.info-list li {
+    margin-bottom: 0.6rem;
+}
+
+img {
+    max-width: 50px;
+    height: auto;
+}
