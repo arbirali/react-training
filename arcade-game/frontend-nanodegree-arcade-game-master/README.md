@@ -2,8 +2,13 @@
 
 ## Table of Contents
 
+- [Details](#details)
 - [Instructions](#instructions)
 - [Contributing](#contributing)
+
+## Details
+
+A JavaScript training project, which includes deep understanding of JS objects, specially the `this` keyword.
 
 ## Instructions
 
