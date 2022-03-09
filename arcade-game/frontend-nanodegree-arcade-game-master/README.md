@@ -8,7 +8,7 @@
 
 ## Details
 
-A JavaScript training project, which includes deep understanding of JS objects, specially the `this` keyword.
+A JavaScript training project, which includes deep understanding of JS objects, prototypes, inheritance and the specially `this` keyword. 
 
 ## Instructions
 
