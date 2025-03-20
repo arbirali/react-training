@@ -4,6 +4,7 @@
   "description": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "setup": "cp .env.example .env.local && npm ci",
     "watch": "webpack --watch",
     "start": "webpack serve --open",
     "build": "webpack --env production"
